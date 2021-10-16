@@ -5,8 +5,8 @@ public class Pasajero extends Persona {
 	private Integer pasaporte; 
 	
 	
-	public Pasajero(String nombre, String apellido, Integer pasaporte) {
-		super(nombre, apellido);
+	public Pasajero(String nombre, String apellido, Integer pasaporte, Integer dni, Integer legajo) {
+		super(nombre, apellido, dni, legajo);
 		
 		this.pasaporte = pasaporte;
 		
