@@ -6,6 +6,7 @@ public abstract class Persona {
 	private String apellido;
 	private Integer dni;
 	
+	
 	public Persona(String nombre, String apellido, Integer dni) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -36,12 +37,12 @@ public abstract class Persona {
 		this.dni = dni;
 	}
 
-	public Integer getLegajo() {
+	/*public Integer getLegajo() {
 		return legajo;
 	}
 
 	public void setLegajo(Integer legajo) {
 		this.legajo = legajo;
-	}
+	}*/
 
 }
