@@ -5,13 +5,11 @@ public abstract class Persona {
 	private String nombre;
 	private String apellido;
 	private Integer dni;
-	private Integer legajo;
 	
-	public Persona(String nombre, String apellido, Integer dni, Integer legajo) {
+	public Persona(String nombre, String apellido, Integer dni) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
-		this.legajo = legajo;
 	}
 
 	public String getNombre() {

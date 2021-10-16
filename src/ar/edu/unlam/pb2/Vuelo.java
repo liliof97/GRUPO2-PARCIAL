@@ -22,6 +22,5 @@ public class Vuelo {
 		return seAgrego;
 	}
 	
-	
 }
 
