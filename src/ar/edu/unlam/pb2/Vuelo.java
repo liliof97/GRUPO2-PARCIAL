@@ -8,6 +8,10 @@ public class Vuelo {
 	private Integer cantidadActualDePasajeros;
 	private Integer numeroDeVuelo;
 	
+	private Pasajero turista [][];
+	private Pasajero primeraClase [][];
+	private Pasajero claseBusiness[][];
+	
 	public Vuelo(Integer numeroDeVuelo) {
 		pasajeros = new Pasajero[CANT_MAXIMA_PASAJEROS];
 		this.cantidadActualDePasajeros = 0;
