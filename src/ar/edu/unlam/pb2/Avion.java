@@ -56,7 +56,15 @@ public class Avion {
 		this.capacidad = capacidad;
 	}
 	
+
 	
+	public Boolean asignarPasajero() {
+		return false;
+	}
+	
+	public Boolean asignarPiloto() {
+		return false;
+	}
 	
 	
 	

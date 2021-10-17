@@ -25,6 +25,18 @@ public class VueloTest {
 		// Si no recuerdo mal también se puede verificar de esta forma
 		assertTrue(valorObtenido);
 	}
+	
+	@Test
+	public void queSePuedaVerificarElDestino() {
+		
+		Vuelo vuelo = new Vuelo(1);
+		
+		String valorEsperado = "El destino de su vuelo es " + DestinoVuelo.CHINA;
+		
+		String valorObtenido = vuelo.verificarDestino(DestinoVuelo.CHINA);
+		
+		assertEquals(valorEsperado, valorObtenido);
+	}
 
 	@Test
 	public void queAlSuperarLaCapacidadMaximaNoPermitaIngresarPasajero() {
@@ -69,4 +81,14 @@ public class VueloTest {
 
 	}
 
+	public void queSePuedaVerificarElPrecioDelDestino() {
+		
+		Vuelo vuelo = new Vuelo(1);
+		
+		String valorEsperado = "El valor de su destino es de " + 3400;
+		
+		String valorObtenido = vuelo.verificarPrecioDestino(DestinoVuelo.ITALIA);
+		
+		assertEquals(valorEsperado, valorObtenido);
+	}
 }
