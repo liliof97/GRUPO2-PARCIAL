@@ -26,4 +26,22 @@ public class VueloTest {
 		assertTrue(valorObtenido);
 	}
 
+	@Test
+	public void queAlElegirTipoDeVueloPrimeraClaseElPrecioDelPasajeSeaDiezMil() {
+
+		String nombre="Mario";
+		String apellido="Lopez";
+		Integer pasaporte = 23445;
+		Integer dni = 40001002;
+		Integer numeroDeVuelo = 1;
+		Integer valorEsperado = 10000;
+		
+		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.PRIMERACLASE);
+		Vuelo vuelo = new Vuelo(numeroDeVuelo);
+		
+		Integer valorObtenido = vuelo.precioPasaje(pasajero);
+		
+		assertEquals(valorEsperado,valorObtenido);
+		
+	}
 }

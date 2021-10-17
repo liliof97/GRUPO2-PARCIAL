@@ -35,6 +35,24 @@ public class Vuelo {
 	public void setNumeroDeVuelo(Integer numeroDeVuelo) {
 		this.numeroDeVuelo = numeroDeVuelo;
 	}
+
+	public Integer precioPasaje(Pasajero pasajero) {
+		Integer precioDelPasaje=0;
+		switch(pasajero.getTipo()) {
+		case PRIMERACLASE:
+			precioDelPasaje=10000;
+			break;
+		case CLASEBUSINESS:
+			precioDelPasaje=5000;
+			break;
+		case CLASETURISTA:
+			precioDelPasaje=2500;
+			break;
+		default:
+				break;
+		}
+		return precioDelPasaje;
+	}
 	
 	
 }
