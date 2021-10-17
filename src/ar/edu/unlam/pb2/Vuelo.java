@@ -4,7 +4,7 @@ public class Vuelo {
 
 	private Pasajero pasajeros[];
 	//Esto puede variar al hacer el test en JUnit
-	private final Integer CANT_MAXIMA_PASAJEROS = 100;
+	private final Integer CANT_MAXIMA_PASAJEROS = 3;
 	private Integer cantidadActualDePasajeros;
 	private Integer numeroDeVuelo;
 	
