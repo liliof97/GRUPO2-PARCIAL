@@ -15,7 +15,7 @@ public class VueloTest {
 		Integer numeroDeVuelo = 1;
 		Boolean valorEsperado = true;
 
-		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
+		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.ALEMANIA);
 
 		Vuelo vuelo = new Vuelo(numeroDeVuelo);
 
@@ -47,10 +47,10 @@ public class VueloTest {
 		Integer numeroDeVuelo = 1;
 		Boolean valorEsperado = false;
 
-		Pasajero pasajero1 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
-		Pasajero pasajero2 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
-		Pasajero pasajero3 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
-		Pasajero pasajero4 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
+		Pasajero pasajero1 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.ALEMANIA);
+		Pasajero pasajero2 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.ALEMANIA);
+		Pasajero pasajero3 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.ALEMANIA);
+		Pasajero pasajero4 = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.ALEMANIA);
 
 		Vuelo vuelo = new Vuelo(numeroDeVuelo);
 
@@ -72,23 +72,49 @@ public class VueloTest {
 		Integer numeroDeVuelo = 1;
 		Integer valorEsperado = 10000;
 
-		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.PRIMERACLASE);
+		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.PRIMERACLASE, DestinoVuelo.ALEMANIA);
 		Vuelo vuelo = new Vuelo(numeroDeVuelo);
 
-		Integer valorObtenido = vuelo.precioPasaje(pasajero);
+		Integer valorObtenido = vuelo.precioTipoVuelo(pasajero);
 
 		assertEquals(valorEsperado, valorObtenido);
 
 	}
-
+	
+	@Test
 	public void queSePuedaVerificarElPrecioDelDestino() {
+
+		String nombre = "Mario";
+		String apellido = "Lopez";
+		Integer pasaporte = 23445;
+		Integer dni = 40001002;
+		Integer numeroDeVuelo = 1;
+		Integer valorEsperado = 3400;
 		
-		Vuelo vuelo = new Vuelo(1);
+		Vuelo vuelo = new Vuelo(numeroDeVuelo);
+		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.PRIMERACLASE, DestinoVuelo.ITALIA);
 		
-		String valorEsperado = "El valor de su destino es de " + 3400;
 		
-		String valorObtenido = vuelo.verificarPrecioDestino(DestinoVuelo.ITALIA);
+		Integer valorObtenido = vuelo.verificarPrecioDestino(pasajero);
 		
 		assertEquals(valorEsperado, valorObtenido);
 	}
+	
+	@Test
+	public void queAlElegirTipoDeVueloClaseTuristaYAlElegirDestinoFranciaElPrecioDelPasajeSeaDeSeisMil() {
+		String nombre = "Mario";
+		String apellido = "Lopez";
+		Integer pasaporte = 23445;
+		Integer dni = 40001002;
+		Integer numeroDeVuelo = 1;
+		Integer valorEsperado = 6000;
+		
+		Vuelo vuelo = new Vuelo(numeroDeVuelo);
+		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA, DestinoVuelo.FRANCIA);
+		
+		Integer valorObtenido=vuelo.precioPasaje(pasajero);
+		
+		assertEquals(valorEsperado,valorObtenido);
+	}
+	
 }

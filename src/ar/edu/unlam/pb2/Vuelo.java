@@ -2,7 +2,6 @@ package ar.edu.unlam.pb2;
 
 public class Vuelo {
 	
-	private DestinoVuelo destino;
 	private Integer valorDestino = 0;
 	private Pasajero pasajeros[];
 	// Esto puede variar al hacer el test en JUnit
@@ -38,16 +37,8 @@ public class Vuelo {
 		this.numeroDeVuelo = numeroDeVuelo;
 	}
 	
-	public DestinoVuelo getDestino() {
-		return destino;
-	}
-	
-	public void setDestino(DestinoVuelo destino) {
-		this.destino = destino;
-	}
-	
-	public String verificarPrecioDestino(DestinoVuelo destino) {
-		switch(destino) {
+	public Integer verificarPrecioDestino(Pasajero pasajero) {
+		switch(pasajero.getDestino()) {
 		case ITALIA:
 			valorDestino = 3400;
 			break;
@@ -79,7 +70,7 @@ public class Vuelo {
 			valorDestino = 2500;
 			break;
 		}
-		return "El valor de su destino es de " + valorDestino;		
+		return valorDestino;		
 	}
 	
 	public String verificarDestino(DestinoVuelo destino) {
@@ -119,22 +110,27 @@ public class Vuelo {
 	}
 	
 
-	public Integer precioPasaje(Pasajero pasajero) {
-		Integer precioDelPasaje = 0;
+	public Integer precioTipoVuelo(Pasajero pasajero) {
+		Integer precioTipoVuelo = 0;
 		switch (pasajero.getTipo()) {
 		case PRIMERACLASE:
-			precioDelPasaje = 10000;
+			precioTipoVuelo = 10000;
 			break;
 		case CLASEBUSINESS:
-			precioDelPasaje = 5000;
+			precioTipoVuelo = 5000;
 			break;
 		case CLASETURISTA:
-			precioDelPasaje = 2500;
+			precioTipoVuelo = 2500;
 			break;
 		default:
 			break;
 		}
-		return precioDelPasaje;
+		return precioTipoVuelo;
 	}
 
+	public Integer precioPasaje(Pasajero pasajero) {
+	Integer precioPasaje=precioTipoVuelo(pasajero)+verificarPrecioDestino(pasajero);
+	return precioPasaje;
+	}
+	
 }
