@@ -10,9 +10,13 @@ public class VueloTest {
 	public void queAlComprarElVueloyAsignarSuAsientoYTipoDeVueloEsteGuardeAlPasajeroEnElTipoDevueloDeseado() {
 		TipoDeVuelo tipo=TipoDeVuelo.PRIMERACLASE;
 		DestinoVuelo destino=DestinoVuelo.ALEMANIA;
+		
 		Pasajero pasajero=new Pasajero("lili","alvez",456123,415936,tipo,destino);
+		
 		Vuelo vuelo=new Vuelo(456789,destino);
+		
 		Boolean valorActual=vuelo.agregarPasajero(pasajero,0,1);
+		
 		assertTrue(valorActual);
 		
 	}
@@ -27,7 +31,9 @@ public class VueloTest {
 		Pasajero pasajero4=new Pasajero("lili","alvez",456123,415936,tipo,destino);
 		Pasajero pasajero5=new Pasajero("lili","alvez",456123,415936,tipo,destino);
 
+		
 		Vuelo vuelo=new Vuelo(456789,destino);
+		
 		Boolean valorActual1=vuelo.agregarPasajero(pasajero1,0,0);
 		Boolean valorActual2=vuelo.agregarPasajero(pasajero1,0,1);
 		Boolean valorActual3=vuelo.agregarPasajero(pasajero2,1,0);
@@ -46,26 +52,34 @@ public class VueloTest {
 		TipoDeVuelo tipo=TipoDeVuelo.CLASEBUSINESS;
 		DestinoVuelo destino=DestinoVuelo.ALEMANIA;
 		DestinoVuelo destino1=DestinoVuelo.CHINA;
-		Pasajero pasajero1=new Pasajero("brai","funes",456123,415936,tipo,destino);
+		
+		Pasajero pasajero1=new Pasajero("lili","alvez",456123,415936,tipo,destino);
 		Pasajero pasajero2=new Pasajero("lili","alvez",456123,415936,tipo,destino1);
+		
 		Vuelo vuelo=new Vuelo(456789,destino);
+		
 		Boolean valorActual1=vuelo.agregarPasajero(pasajero1,0,0);
 		Boolean valorActual2=vuelo.agregarPasajero(pasajero2,0,0);
+		
 		assertTrue(valorActual1);
-	     assertFalse(valorActual2);
+	    assertFalse(valorActual2);
 	}
 	@Test
-	public void queDeFalseSiElDesrinoDelVueloYdestinoDePasajeroSonDistintos() {
+	public void queDeFalseSiElDestinoDelVueloYdestinoDePasajeroSonDistintos() {
 		TipoDeVuelo tipo=TipoDeVuelo.CLASETURISTA;
 		DestinoVuelo destino=DestinoVuelo.ALEMANIA;
 		DestinoVuelo destino1=DestinoVuelo.CHINA;
-		Pasajero pasajero1=new Pasajero("brai","funes",456123,415936,tipo,destino);
+		
+		Pasajero pasajero1=new Pasajero("lili","alvez",456123,415936,tipo,destino);
 		Pasajero pasajero2=new Pasajero("lili","alvez",456123,415936,tipo,destino1);
+		
 		Vuelo vuelo=new Vuelo(456789,destino);
+		
 		Boolean valorActual1=vuelo.agregarPasajero(pasajero1,0,0);
 		Boolean valorActual2=vuelo.agregarPasajero(pasajero2,0,0);
+		
 		assertTrue(valorActual1);
-	     assertFalse(valorActual2);
+	    assertFalse(valorActual2);
 		
 		
 	}
@@ -102,7 +116,7 @@ public class VueloTest {
 		
 		TipoDeVuelo tipo1=TipoDeVuelo.CLASETURISTA;
 		TipoDeVuelo tipo2=TipoDeVuelo.PRIMERACLASE;
-	    TipoDeVuelo tipo3=TipoDeVuelo.CLASEBUSINESS;
+	    
 		DestinoVuelo destino=DestinoVuelo.ALEMANIA;
 		
 		
@@ -112,6 +126,7 @@ public class VueloTest {
 		Pasajero pasajero4=new Pasajero("lili","alvez",456123,415936,tipo1,destino);
 	
 		Vuelo vuelo=new Vuelo(456789,destino);
+		
 		vuelo.agregarPasajero(pasajero1,0,0);
 		vuelo.agregarPasajero(pasajero2,0,1);
 		vuelo.agregarPasajero(pasajero3,1,0);
