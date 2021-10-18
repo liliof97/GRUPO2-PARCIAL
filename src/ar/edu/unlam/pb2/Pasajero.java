@@ -4,17 +4,19 @@ public class Pasajero extends Persona {
 
 	private Integer pasaporte;
 	private TipoDeVuelo tipo;
+	private DestinoVuelo destino;
 	
-	
-	public Pasajero(String nombre, String apellido, Integer pasaporte, Integer dni, TipoDeVuelo tipo) {
+	public Pasajero(String nombre, String apellido, Integer pasaporte, Integer dni, TipoDeVuelo tipo,DestinoVuelo destino) {
 		super(nombre, apellido, dni);
 		this.pasaporte = pasaporte;
 		this.tipo = tipo;
+		this.destino=destino;
+	}
+	public DestinoVuelo getdestino() {
+		return this.destino;
+		
 	}
 	
-	public Integer comprarBoletoDeAvion() {
-		return 0;
-	}
 
 	public TipoDeVuelo getTipo() {
 		return tipo;
