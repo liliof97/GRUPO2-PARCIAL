@@ -1,7 +1,6 @@
 package ar.edu.unlam.pb2;
 
 public enum DestinoVuelo {
-	
 	ITALIA,
 	FRANCIA,
 	ALEMANIA,
@@ -12,6 +11,4 @@ public enum DestinoVuelo {
 	CHINA,
 	JAPON,
 	COREA,
-	
-
 }
