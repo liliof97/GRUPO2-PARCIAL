@@ -7,26 +7,6 @@ import org.junit.Test;
 public class VueloTest {
 
 	@Test
-	public void queSePuedaAgregarUnPasajeroAUnVueloCorrectamente() {
-		String nombre="Mario";
-		String apellido="Lopez";
-		Integer pasaporte = 23445;
-		Integer dni = 40001002;
-		Integer numeroDeVuelo = 1;
-		TipoIdioma idiomaRequeridoUno = TipoIdioma.ALEMAN;
-		TipoIdioma idiomaRequeridoDos = TipoIdioma.ESPAÑOL;
-		DestinoVuelo destino = DestinoVuelo.ESPAÑA;
-		Boolean valorEsperado = true;
-		
-		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.CLASETURISTA);
-		Vuelo vuelo = new Vuelo(numeroDeVuelo, idiomaRequeridoUno, idiomaRequeridoDos, destino);
-		
-		Boolean valorObtenido = vuelo.agregarPasajero(pasajero);
-		
-		assertEquals(valorEsperado, valorObtenido);	
-		assertTrue(valorObtenido);
-	}
-	@Test
 	public void queSePuedaInstanciarUnaAzafataCorrectamente() {
 		String nombre="Marta";
 		String apellido="Lopez";

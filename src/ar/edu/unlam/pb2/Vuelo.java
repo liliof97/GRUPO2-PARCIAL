@@ -10,10 +10,6 @@ public class Vuelo {
 	private final Integer CANTIDAD_MAX_PILOTOS = 3;
 	private Integer cantidadActualDePilotos;
 	
-	private Pasajero pasajeros[];
-	private final Integer CANT_MAXIMA_PASAJEROS = 100;
-	private Integer cantidadActualDePasajeros;
-	
 	private Integer numeroDeVuelo;
 	private TipoIdioma idiomaRequeridoUno;
 	private TipoIdioma idiomaRequeridoDos;
@@ -22,8 +18,6 @@ public class Vuelo {
 	private Integer cantidadDeAzafatas;
 	
 	public Vuelo(Integer numeroDeVuelo, TipoIdioma idiomaRequeridoUno, TipoIdioma idiomaRequeridoDos, DestinoVuelo destino) {
-		pasajeros = new Pasajero[CANT_MAXIMA_PASAJEROS];
-		this.cantidadActualDePasajeros = 0;
 		this.numeroDeVuelo=numeroDeVuelo;
 		azafatas = new Azafata[CANTIDAD_MAX_AZAFATAS];
 		this.cantidadActualDeAzafatas = 0;
@@ -35,15 +29,6 @@ public class Vuelo {
 		this.destino = destino;
 		
 		this.cantidadDeAzafatas = 0;
-	}
-	
-	public Boolean agregarPasajero(Pasajero pasajero) {
-		Boolean seAgrego= false;
-		if(this.cantidadActualDePasajeros<this.pasajeros.length) {
-			pasajeros[this.cantidadActualDePasajeros++] = pasajero;
-			seAgrego=true;
-		}
-		return seAgrego;
 	}
 
 	public Boolean agregarPiloto(Piloto piloto) {
