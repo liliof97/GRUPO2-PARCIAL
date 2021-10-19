@@ -37,15 +37,5 @@ public abstract class Persona {
 		this.dni = dni;
 	}
 
-<<<<<<< HEAD
-=======
-	/*public Integer getLegajo() {
-		return legajo;
-	}
 
-	public void setLegajo(Integer legajo) {
-		this.legajo = legajo;
-	}*/
-
->>>>>>> Lilian
 }

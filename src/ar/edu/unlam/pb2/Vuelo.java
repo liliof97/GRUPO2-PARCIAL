@@ -44,6 +44,8 @@ public class Vuelo {
 	public void setNumeroDeVuelo(Integer numeroDeVuelo) {
 		this.numeroDeVuelo = numeroDeVuelo;
 	}
+
+	
 	
 	public Integer verificarPrecioDestino(Pasajero pasajero) {
 		Integer valorDestino=0;

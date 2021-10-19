@@ -77,23 +77,6 @@ public class VueloTest {
 		assertTrue(valorActual4);
 		assertFalse(valorActual5);
 	}
-	@Test
-	public void queAlElegirTipoDeVueloPrimeraClaseElPrecioDelPasajeSeaDiezMil() {
-
-		String nombre = "Mario";
-		String apellido = "Lopez";
-		Integer pasaporte = 23445;
-		Integer dni = 40001002;
-		Integer numeroDeVuelo = 1;
-		Integer valorEsperado = 10000;
-
-		Pasajero pasajero = new Pasajero(nombre, apellido, pasaporte, dni, TipoDeVuelo.PRIMERACLASE, DestinoVuelo.ALEMANIA);
-		Vuelo vuelo = new Vuelo(numeroDeVuelo,DestinoVuelo.ALEMANIA);
-
-		Integer valorObtenido = vuelo.precioTipoVuelo(pasajero);
-
-		assertEquals(valorEsperado, valorObtenido);
-	}
 	
 	@Test
 	public void queSePuedaVerificarElPrecioDelDestino() {

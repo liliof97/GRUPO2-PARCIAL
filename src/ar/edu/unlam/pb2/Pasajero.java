@@ -32,22 +32,7 @@ public class Pasajero extends Persona {
 		return tipo;
 	}
 	
-	public Integer precioPasaje(TipoDeVuelo tipoDeVuelo) {
-		Integer precioDelPasaje=0;
-		switch(tipoDeVuelo) {
-		case PRIMERACLASE:
-			precioDelPasaje=10000;
-			break;
-		case CLASETURISTA:
-			precioDelPasaje=5000;
-			break;
-		case CLASEBUSINESS:
-			precioDelPasaje=2500;
-		}
-		
-		return precioDelPasaje;
-	}
-
+	
 	public void setTipo(TipoDeVuelo tipo) {
 		this.tipo = tipo;
 	}
